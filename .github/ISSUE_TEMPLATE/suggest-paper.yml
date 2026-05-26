@@ -1,0 +1,141 @@
+name: Suggest a Paper
+description: Suggest a research paper for the AI/ML WiFi Sensing Hub.
+title: "[Paper]: "
+labels: ["paper", "evidence-intake"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a paper for the AI/ML WiFi Sensing Hub.
+        Please provide as much information as possible so the paper can be reviewed and mapped correctly.
+
+  - type: input
+    id: paper-title
+    attributes:
+      label: Paper title
+      description: Full title of the paper.
+      placeholder: "Example: WiFi-based contactless activity recognition using CSI and deep learning"
+    validations:
+      required: true
+
+  - type: input
+    id: authors
+    attributes:
+      label: Authors
+      description: List the authors if known.
+      placeholder: "Author A, Author B, Author C"
+    validations:
+      required: false
+
+  - type: input
+    id: year-venue
+    attributes:
+      label: Year and venue/source
+      description: Publication year and venue, conference, journal, arXiv, or preprint source.
+      placeholder: "2024, ACM MobiCom / IEEE INFOCOM / arXiv / journal name"
+    validations:
+      required: false
+
+  - type: input
+    id: link
+    attributes:
+      label: DOI or URL
+      description: Add a DOI, publisher page, arXiv link, GitHub link, or project page.
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: application-category
+    attributes:
+      label: Application category
+      description: Select the closest category.
+      options:
+        - Healthcare-relevant sensing
+        - Smart environments
+        - Human activity recognition
+        - Security and privacy
+        - Robotics / interaction
+        - Industrial / IoT sensing
+        - General / background
+        - Future category
+        - Not sure
+    validations:
+      required: true
+
+  - type: dropdown
+    id: research-area
+    attributes:
+      label: Research area
+      description: Select the main research area.
+      options:
+        - WiFi CSI sensing
+        - AI/ML methods
+        - Signal processing
+        - Wireless security
+        - Healthcare-relevant sensing
+        - Smart environments
+        - Human activity recognition
+        - Reproducibility / benchmarking
+        - Other / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Why is this paper relevant?
+      description: Briefly explain why this paper should be included in the hub.
+      placeholder: "This paper is relevant because..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: dataset-available
+    attributes:
+      label: Does the paper use or release a dataset?
+      options:
+        - Yes
+        - No
+        - Request needed
+        - Broken link
+        - Unknown
+        - Not applicable
+    validations:
+      required: false
+
+  - type: dropdown
+    id: code-available
+    attributes:
+      label: Is code available?
+      options:
+        - Yes
+        - No
+        - Partial
+        - Broken link
+        - Unknown
+        - Not applicable
+    validations:
+      required: false
+
+  - type: dropdown
+    id: security-relevance
+    attributes:
+      label: Security, robustness, or privacy relevance
+      options:
+        - Direct
+        - Partial
+        - Background
+        - Not security-relevant
+        - Unknown
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      description: Add dataset links, code links, limitations, or related papers.
+      placeholder: "Optional notes..."
+    validations:
+      required: false
