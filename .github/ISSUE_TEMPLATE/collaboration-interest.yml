@@ -1,0 +1,80 @@
+name: Collaboration Interest
+description: Suggest a collaboration idea, research group, dataset owner, or related community.
+title: "[Collaboration]: "
+labels: ["collaboration", "evidence-intake"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your interest in the AI/ML WiFi Sensing Hub.
+        This form is for suggesting collaboration ideas, research groups, labs, datasets, or communities.
+
+  - type: input
+    id: name-group
+    attributes:
+      label: Name, group, or organization
+      placeholder: "Researcher name, lab, group, dataset owner, or organization"
+    validations:
+      required: true
+
+  - type: input
+    id: website-profile
+    attributes:
+      label: Website or profile
+      placeholder: "https://..."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: collaboration-type
+    attributes:
+      label: Collaboration type
+      options:
+        - Paper suggestion
+        - Dataset suggestion
+        - Code or reproducibility
+        - Security / robustness discussion
+        - Healthcare-relevant sensing
+        - Smart environments
+        - Research group / lab
+        - Community / event
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: connection
+    attributes:
+      label: Connection to the hub
+      description: Explain how this person, lab, group, dataset, or idea relates to AI/ML WiFi sensing.
+      placeholder: "This is relevant because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: possible-collaboration
+    attributes:
+      label: Possible collaboration angle
+      placeholder: "Example: dataset/code review, related paper suggestions, reproducibility discussion, security gap mapping, etc."
+    validations:
+      required: false
+
+  - type: dropdown
+    id: collaboration-value
+    attributes:
+      label: Collaboration value
+      options:
+        - High
+        - Medium
+        - Low
+        - Not sure
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes
+      placeholder: "Optional notes..."
+    validations:
+      required: false
